@@ -17,7 +17,7 @@
 }
 #topNav > div {
   width: 54%;
-  height:auto;
+  height: auto;
 }
 
 #nav {
@@ -95,7 +95,7 @@ input {
 }
 
 #container {
-  height: 500px;
+  height: auto;
   background-color: rgb(0, 0, 0);
   border: 1px solid green;
 }
@@ -104,15 +104,15 @@ input {
   color: rgb(255, 225, 0);
   border: 1px solid rgb(0, 0, 0);
   height: auto;
-  width: 85%;
+  width: 90%;
   margin: auto;
   margin-top: 50px;
-}
+} 
 
 #midContainer {
   display: flex;
   border: 1px solid rgb(0, 0, 0);
-  width: 85%;
+  width: 90%;
   margin: auto;
   height: auto;
   justify-content: space-between;
@@ -127,7 +127,7 @@ input {
   margin-bottom: 25px;
 }
 #midContainer div {
-  border: 1px solid black;
+  border: 1px solid rgb(0, 0, 0);
   width: auto;
 }
 #midContainer p {
@@ -137,9 +137,8 @@ input {
   letter-spacing: 1px;
   line-height: 5px;
 }
-#midContainer > div > div {
-  display: flex;
-  justify-content: space-between;
+#midContainer > div > div > img {
+  width: 60%;
 }
 
 #subscribe input {
@@ -149,10 +148,97 @@ input {
   border-bottom: 1px solid rgb(255, 225, 0);
   width: 110px;
   border-radius: 0px;
-  font-size:small;
+  font-size: small;
   margin-right: -10px;
 }
 #subscribe button {
   background-color: rgb(255, 225, 0);
   padding: 7px 10px;
 }
+
+#media {
+  color: rgb(229, 202, 3);
+  display: flex;
+  border: 1px solid rgb(0, 0, 0);
+  width: 90%;
+  margin: auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#media > div {
+  border: 1px solid rgb(0, 0, 0);
+}
+
+#media > div:nth-child(2) > img {
+  border: 1px solid rgb(0, 0, 0);
+  width: 40%;
+}
+
+#media > div:nth-child(3) > img {
+  border: 1px solid rgb(0, 0, 0);
+  width: 60%;
+}
+
+#media > div:nth-child(1) {
+  width: 210px;
+  color: white;
+  font-size: small;
+  padding-top: 15px;
+}
+
+#media > div > h4 {
+  font-size: small;
+  font-weight: 300;
+}
+#media > div:nth-child(2) {
+  width: 200px;
+}
+
+#itemType{
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  margin-left: 40px;
+}
+
+#itemType>div{
+  border: 1px solid rgb(0, 0, 0);
+  text-align: left;
+  line-height: 2.5px;
+}
+#itemType>div>h3{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+}
+
+#itemType>div>h5{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+  margin-top: 40px;
+}
+#itemType>div>p{
+  font-weight: 100;
+  font-size: small;
+}
+#teal>h3{
+  line-height: 25px;
+}
+
+#history{
+  color:white;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  width: 87%;
+  margin: auto;
+}
+#history>h3{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+}
+#history>p{
+  font-size: small;
+  color: rgb(230, 230, 230);
+  font-weight:100;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+
+
