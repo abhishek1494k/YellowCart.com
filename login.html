@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="dropDown.css" />
+    <script
+      src="https://kit.fontawesome.com/71ecf3d565.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      #loginImg {
+        display: flex;
+      }
+      #loginImg > div:nth-child(1) {
+        background-color: rgb(253, 241, 226);
+        width: 50%;
+      }
+      #loginImg > div > div:nth-child(2) {
+        height: 200px;
+        background-color: rgb(253, 241, 226);
+      }
+      #bag {
+        text-align: center;
+        padding-left: 40px;
+      }
+      #bag > h3 + div {
+        border: 1px solid black;
+        border-radius: 5px;
+        width: 270px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        margin-top: 70px;
+      }
+      #mobile {
+        width: 23%;
+        border: 0;
+        outline: none;
+        background-color: rgb(229, 228, 228);
+        text-align: center;
+      }
+      #mobile + input {
+        width: 70%;
+        background-color: white;
+        border: 0;
+        outline: none;
+        font-size:small;
+      }
+      #submit{
+        padding:15px;
+        background-color:rgb(2, 128, 128);
+        color:white;
+        width:290px;
+        border-radius: 5px;
+        margin-top: 15px;
+        font-size: large;
+        letter-spacing: 2px;
+      }
+      h3{
+        color:rgb(114, 114, 114);
+        font-weight: 100;
+      }
+      #email{
+        padding:10px;
+        background-color:rgb(255, 255, 255);
+        color:rgb(0, 0, 0);
+        width:290px;
+        border-radius: 5px;
+        margin-top: 15px;
+        font-size: medium;
+        letter-spacing: 2px;
+      }
+      #media button{
+        padding:5px;
+        background-color:rgb(255, 255, 255);
+        color:rgb(0, 0, 0);
+        width:290px;
+        border-radius: 5px;
+        margin-top: 15px;
+        font-size: small;
+        letter-spacing: 2px;
+      }
+      #media{
+        width: 290px;
+        display: flex;
+        justify-content: space-between;
+        border:0;
+      }
+      #media button:first-child{
+        margin-right: 5px;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div id="topNav">
+      <p>Offer</p>
+      <a href="fanbook.html">Fanbook</a>
+      <p>Download App</p>
+      <p>TriBe Membership</p>
+      <div></div>
+      <p>Contact Us</p>
+      <p>Track Order</p>
+    </div>
+    <div id="nav">
+      <img id="bewakoof" src="logo.png" />
+      <div id="menu-bar">
+        <li>
+          <a href="#">MENS</a>
+          <div class="menu1">
+            <ul>
+              <li>Top Wear</li>
+              <div class="submenu1">
+                <ul>
+                  <li>New Arrival</li>
+                  <li>Half Sleeve T-Shirts</li>
+                  <li>Hoodies & Sweatshirts</li>
+                  <li>Long Sleeve T-shirts</li>
+                  <li>Printed T-shirts</li>
+                  <li>Plain T-shirts</li>
+                  <li>Vests</li>
+                  <li>Polo T-Shirts</li>
+                  <li>Kurtas</li>
+                  <li>Combo T-Shirts</li>
+                  <li>Shirts</li>
+                  <li>Nightwear</li>
+                  <li>Plus Size Store</li>
+                </ul>
+              </div>
+              <li>Bottom Wear</li>
+              <div class="submenu1">
+                <ul>
+                  <li>Men's Pajamas</li>
+                  <li>Men's Boxer Shorts</li>
+                  <li>Men's Shorts</li>
+                  <li>Men's Track Pants</li>
+                  <li>Men's Pants</li>
+                </ul>
+              </div>
+              <li>Featured</li>
+              <div class="submenu1">
+                <ul>
+                  <li>Men's Flip Flops</li>
+                  <li>Men's Sliders</li>
+                  <li>Marvel T-Shirts</li>
+                  <li>Disney T-Shirts</li>
+                  <li>Avengers T-Shirts</li>
+                  <li>Star Wars T-Shirts</li>
+                  <li>Batman T-Shirts</li>
+                  <li>Superman T-Shirts</li>
+                  <li>Joker T-Shirts</li>
+                </ul>
+              </div>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#">WOMENS</a>
+          <div class="menu1">
+            <ul>
+              <li>TOP WEAR</li>
+              <div class="submenu1">
+                <ul>
+                  <li>New Arrival</li>
+                  <li>Half Sleeve T-Shirts</li>
+                  <li>Hoodies & Sweatshirts</li>
+                  <li>Long Sleeve T-shirts</li>
+                  <li>Printed T-shirts</li>
+                  <li>Plain T-shirts</li>
+                  <li>Combo T-Shirts</li>
+                  <li>Shirts</li>
+                  <li>Nightwear</li>
+                  <li>Plus Size Store</li>
+                </ul>
+              </div>
+              <li>BOTTOM WEAR</li>
+              <div class="submenu1">
+                <ul>
+                  <li>Pajamas</li>
+                  <li>Boxer Shorts</li>
+                  <li>Shorts</li>
+                  <li>Track Pants</li>
+                  <li>Pants</li>
+                </ul>
+              </div>
+              <li>BAGS</li>
+              <div class="submenu1">
+                <ul>
+                  <li>Small Bag</li>
+                  <li>Purse</li>
+                </ul>
+              </div>
+              <li>FEATURED</li>
+              <div class="submenu1">
+                <ul>
+                  <li>Flip Flops</li>
+                  <li>Slides</li>
+                </ul>
+              </div>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#">MOBILE COVER</a>
+          <div class="menu1">
+            <ul>
+              <li>Apple</li>
+              <li>Vivo</li>
+              <li>Samsung</li>
+              <li>Redmi</li>
+              <li>Oneplus</li>
+              <li>Oppo</li>
+              <li>Xiomi</li>
+            </ul>
+          </div>
+        </li>
+      </div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <i id="search" class="fa-sharp fa-solid fa-magnifying-glass"></i>
+      <input
+        type="text"
+        placeholder="Search by product,category or collection"
+      />
+      <h4>|</h4>
+      <p><i class="fa-solid fa-user-ninja"></i></p>
+      <p>🤍</p>
+      <p><i class="fa-sharp fa-solid fa-cart-shopping"></i></p>
+      <p>
+        <img
+          id="india"
+          src="https://images.bewakoof.com/web/india-flag-round-1639566913.png"
+          alt=""
+        />
+      </p>
+    </div>
+    <hr />
+    <div id="loginImg">
+      <div>
+        <div>
+          <img
+            width="85%"
+            src="https://images.bewakoof.com/web/group-19-1617704502.png"
+            alt=""
+          />
+        </div>
+        <div></div>
+      </div>
+      <div id="bag">
+        <h1>Log in/Sign up</h1>
+        <h3>
+          for Latest trends, exciting offers and everything <br />
+          Yellow Cart
+        </h3>
+        <div>
+          <select id="mobile">
+            <option value=""></i>+91</option>
+            <option value=""></i>+92</option>
+          </select>
+          <input type="text" placeholder="&ensp;Enter Mobile Number" />
+        </div>
+        <button id="submit">CONTINUE</button>
+        <p>__________________ OR ___________________</p>
+        <button id="email">
+          <i class="fa-sharp fa-solid fa-envelope"></i> CONTINUE WITH EMAIL
+        </button>
+        <div id="media">
+          <button><i class="fa-brands fa-google"></i> GOOGLE</button>
+          <button><i class="fa-brands fa-facebook-f"></i> FACEBOOK</button>
+        </div>
+        <p style="text-align:center; color:rgb(75, 74, 74); font-size: small; ">By creating an account or logging in, you agree with Yellow Cart's <span style="color:teal;font-size: medium;" >Terms and Conditions</span>  and <span style="color:teal;font-size: medium;"> Privacy Policy.</span></p>
+
+      </div>
+    </div>
+  </body>
+</html>
