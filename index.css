@@ -47,6 +47,7 @@ input {
   padding: 5px 5px;
   border: 1px solid#e4e4e4;
   background-color: #e4e4e4;
+
   margin-left: -22px;
   border: 0;
   outline: none;
@@ -60,6 +61,7 @@ input:hover {
   border: 0;
   outline: none;
 }
+
 #search{
   background-color: #e4e4e4;
   padding:7.5px;
@@ -104,15 +106,16 @@ input:hover {
   height: 70px;
 }
 @media all and (min-width: 1200px) and (max-width: 2000px) {
-  #nav > div {
+ 
+ #nav > div {
     width: 100px;
     /* border: 1px solid black; */
   }
   #topNav > div {
     width: 40%;
-    /* border: 1px solid black; */
   }
-}
+
+
 #matrix2{
   display: grid;
   grid-template-columns: repeat(2,1fr);
