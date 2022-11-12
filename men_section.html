@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Fetch</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="dropDown.css" />
+    <script
+      src="https://kit.fontawesome.com/71ecf3d565.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+
+      #mencontainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 5px;
+        width: 50%;
+        height: auto;
+        margin-left: 280px;
+
+      }
+      img {
+        width: 100%;
+      }
+      #mencontainer > div {
+        border: 2px solid black;
+      }
+      #option {
+        position: fixed;
+        width: 80%;
+        border: 1px solid black;
+      }
+      #option {
+        height: 500px;
+      }
+      #sort {
+        padding: 10px;
+        border: 0;
+        outline: none;
+        margin-left: 880px;
+        height:auto;
+      }
+      /* @media screen and (min-width: 701px) and (max-width: 1000px) {
+        #mencontainer {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: auto;
+          gap: 20px;
+        }
+      }
+
+      @media screen and (min-width: 101px) and (max-width: 700px) {
+        #mencontainer {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: auto;
+          gap: 20px;
+        }
+      } */
+    </style>
+  </head>
+  <body>
+    <div id="topNav">
+      <p>Offer</p>
+      <a href="fanbook.html">Fanbook</a>
+      <p>Download App</p>
+      <p>TriBe Membership</p>
+      <div></div>
+      <p>Contact Us</p>
+      <p>Track Order</p>
+    </div>
+
+    <div id="nav">
+      <a href="index.html"><img id="bewakoof" src="logo.png" /></a>
+      <div id="menu-bar">
+        <li>
+          <a href="#">MENS</a>
+          <div class="menu1">
+            <ul>
+              <li>Top Wear</li>
+              <div class="submenu1">
+                <ul>
+                  <li>New Arrival</li>
+                  <li>Half Sleeve T-Shirts</li>
+                  <li>Hoodies & Sweatshirts</li>
+                  <li>Long Sleeve T-shirts</li>
+                  <li>Printed T-shirts</li>
+                  <li>Plain T-shirts</li>
+                  <li>Vests</li>
+                  <li>Polo T-Shirts</li>
+                  <li>Kurtas</li>
+                  <li>Combo T-Shirts</li>
+                  <li>Shirts</li>
+                  <li>Nightwear</li>
+                  <li>Plus Size Store</li>
+                </ul>
+              </div>
+              <li>Bottom Wear</li>
+              <div class="submenu1">
+                <ul>
+                  <li>Men's Pajamas</li>
+                  <li>Men's Boxer Shorts</li>
+                  <li>Men's Shorts</li>
+                  <li>Men's Track Pants</li>
+                  <li>Men's Pants</li>
+                </ul>
+              </div>
+              <li>Featured</li>
+              <div class="submenu1">
+                <ul>
+                  <li>Men's Flip Flops</li>
+                  <li>Men's Sliders</li>
+                  <li>Marvel T-Shirts</li>
+                  <li>Disney T-Shirts</li>
+                  <li>Avengers T-Shirts</li>
+                  <li>Star Wars T-Shirts</li>
+                  <li>Batman T-Shirts</li>
+                  <li>Superman T-Shirts</li>
+                  <li>Joker T-Shirts</li>
+                </ul>
+              </div>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#">WOMENS</a>
+          <div class="menu1">
+            <ul>
+              <li>TOP WEAR</li>
+              <div class="submenu1">
+                <ul>
+                  <li>New Arrival</li>
+                  <li>Half Sleeve T-Shirts</li>
+                  <li>Hoodies & Sweatshirts</li>
+                  <li>Long Sleeve T-shirts</li>
+                  <li>Printed T-shirts</li>
+                  <li>Plain T-shirts</li>
+                  <li>Combo T-Shirts</li>
+                  <li>Shirts</li>
+                  <li>Nightwear</li>
+                  <li>Plus Size Store</li>
+                </ul>
+              </div>
+              <li>BOTTOM WEAR</li>
+              <div class="submenu1">
+                <ul>
+                  <li>Pajamas</li>
+                  <li>Boxer Shorts</li>
+                  <li>Shorts</li>
+                  <li>Track Pants</li>
+                  <li>Pants</li>
+                </ul>
+              </div>
+              <li>BAGS</li>
+              <div class="submenu1">
+                <ul>
+                  <li>Small Bag</li>
+                  <li>Purse</li>
+                </ul>
+              </div>
+              <li>FEATURED</li>
+              <div class="submenu1">
+                <ul>
+                  <li>Flip Flops</li>
+                  <li>Slides</li>
+                </ul>
+              </div>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#">MOBILE COVER</a>
+          <div class="menu1">
+            <ul>
+              <li>Apple</li>
+              <li>Vivo</li>
+              <li>Samsung</li>
+              <li>Redmi</li>
+              <li>Oneplus</li>
+              <li>Oppo</li>
+              <li>Xiomi</li>
+            </ul>
+          </div>
+        </li>
+      </div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <i id="search" class="fa-sharp fa-solid fa-magnifying-glass"></i>
+      <input
+        type="text"
+        placeholder="Search by product,category or collection"
+      />
+      <h4>|</h4>
+      <p><i class="fa-solid fa-user-ninja"></i></p>
+      <p>🤍</p>
+      <p><i class="fa-sharp fa-solid fa-cart-shopping"></i></p>
+      <p>
+        <img
+          id="india"
+          src="https://images.bewakoof.com/web/india-flag-round-1639566913.png"
+          alt=""
+        />
+      </p>
+    </div>
+    <hr />
+
+    <!-- <button><a href="cart.html">Cart</a></button> -->
+    <p style="font-size: small; color: rgb(110, 106, 106); margin-left:120px;">
+      Home / Men Clothing / Men's T-Shirts / Printed T-Shirts for Men
+    </p>
+    <h2 style="margin-left:120px;" >
+      <span style="border-bottom: 4px solid rgb(255, 213, 0);">Printed</span>
+      Printed T-Shirts for Men
+    </h2>
+    <select id="sort" onchange="handlesort()">
+      <option value="">SORT BY:</option>
+      <option value="HTL">Price:High to Low</option>
+      <option value="LTH">Price:Low to High</option>
+    </select>
+
+      <!-- <div id="option"></div> -->
+      <div id="mencontainer"></div>
+
+  </body>
+</html>
+
+<script>
+  let bag = [];
+  let cartItem = [
+    {
+      id: 1,
+      image:
+        "https://images.bewakoof.com/t640/the-ryuk-full-sleeve-t-shirt-554015-1667974706-1.jpg",
+      title: "Yellow Cart",
+      description: "Men's The Ryuk Graphic Printed T-shirt",
+      price: 349,
+      realPrice: 999,
+      tribePrice: 319,
+    },
+    {
+      id: 2,
+      image:
+        "https://images.bewakoof.com/t640/the-ryuk-oversized-full-sleeve-t-shirt-554016-1667974663-1.jpg",
+      title: "Yellow Cart",
+      description: "Men's The Ryuk Graphic Printed T-shirt",
+      price: 599,
+      realPrice: 1499,
+      tribePrice: 519,
+    },
+    {
+      id: 3,
+      image:
+        "https://images.bewakoof.com/t640/the-ryuk-half-sleeve-t-shirt-554010-1667975037-1.jpg",
+      title: "Yellow Cart",
+      description: "Men's The Ryuk Graphic Printed T-shirt",
+      price: 329,
+      realPrice: 999,
+      tribePrice: 309,
+    },
+
+    {
+      id: 4,
+      image:
+        "https://images.bewakoof.com/t640/men-s-black-what-the-duck-graphic-printed-oversized-t-shirt-553306-1667891652-1.jpg",
+      title: "Yellow Cart",
+      description: "Men's What the Duck Graphic Printed Oversized T-shirt",
+      price: 599,
+      realPrice: 1499,
+      tribePrice: 559,
+    },
+    {
+      id: 5,
+      image:
+        "https://images.bewakoof.com/t640/the-ryuk-oversized-t-shirt-554020-1667974943-1.jpg",
+      title: "Yellow Cart",
+      description: "Men's The Ryuk Graphic Printed T-shirt",
+      price: 649,
+      realPrice: 1499,
+      tribePrice: 599,
+    },
+    {
+      id: 6,
+      image:
+        "https://images.bewakoof.com/t640/the-ryuk-oversized-t-shirt-554011-1667974782-1.jpg",
+      title: "Yellow Cart",
+      description: "Men's The Ryuk Graphic Printed T-shirt",
+      price: 449,
+      realPrice: 1299,
+      tribePrice: 419,
+    },
+    {
+      id: 7,
+      image:
+        "https://images.bewakoof.com/t640/men-s-black-inspire-graphic-printed-oversized-t-shirt-553301-1667891608-1.jpg",
+      title: "Yellow Cart",
+      description: "Men's Black Reciept Typography Super Loose T-shirt",
+      price: 449,
+      realPrice: 1299,
+      tribePrice: 419,
+    },
+    {
+      id: 8,
+      image:
+        "https://images.bewakoof.com/t640/men-s-white-what-the-duck-graphic-printed-oversized-t-shirt-553308-1667891931-1.jpg",
+      title: "Yellow Cart",
+      description: "Men's What the Duck Graphic Printed Oversized T-shirt",
+      price: 599,
+      realPrice: 1499,
+      tribePrice: 559,
+    },
+    {
+      id: 9,
+      image:
+        "https://images.bewakoof.com/t640/the-ryuk-oversized-t-shirt-554011-1667974782-1.jpg",
+      title: "Yellow Cart",
+      description: "Men's White The Ryuk Graphic Printed T-shirt",
+      price: 449,
+      realPrice: 1299,
+      tribePrice: 419,
+    },
+    {
+      id: 10,
+      image:
+        "https://images.bewakoof.com/t640/men-s-blue-dope-bear-graphic-printed-oversized-t-shirt-547532-1667563188-1.jpg",
+      title: "Yellow Cart",
+      description: "Men's Blue Dope Graphic Printed Oversized T-shirt",
+      price: 537,
+      realPrice: 1299,
+      tribePrice: 489,
+    },
+    {
+      id: 11,
+      image:
+        "https://images.bewakoof.com/t640/men-s-verdant-green-toxic-typography-oversized-hoodie-t-shirt-540917-1667564036-1.jpg",
+      title: "Yellow Cart",
+      description: "Men's Verdant Graphic Printed T-shirt",
+      price: 627,
+      realPrice: 1299,
+      tribePrice: 600,
+    },
+    {
+      id: 12,
+      image:
+        "https://images.bewakoof.com/t1080/unisex-fit-black-angry-donald-printed-t-shirt-516696-1667400211-1.jpg",
+      title: "Yellow Cart",
+      description: "Unisex Black Angry Donald Graphic Printed T-shirt",
+      price: 799,
+      realPrice: 1200,
+      tribePrice: 600,
+    },
+    {
+      id: 13,
+      image:
+        "https://images.bewakoof.com/t1080/men-s-black-vibes-t-shirt-298518-1655747859-1.jpg",
+      title: "Yellow Cart",
+      description: "Men's Black Vibes T-shirt",
+      price: 447,
+      realPrice: 1299,
+      tribePrice: 400,
+    },
+    {
+      id: 14,
+      image:
+        "https://images.bewakoof.com/t1080/unisex-blue-mickey-color-block-t-shirt-516693-1667898801-1.jpg",
+      title: "Yellow Cart",
+      description: "Unisex Blue Mickey Color Block T-shirt",
+      price: 799,
+      realPrice: 1300,
+      tribePrice: 700,
+    },
+    {
+      id: 15,
+      image:
+        "https://images.bewakoof.com/t1080/men-s-yellowtail-game-over-minimal-typography-oversized-t-shirt-540906-1667499263-1.jpg",
+      title: "Yellow Cart",
+      description:
+        "Men's Yellowtail Game Over Minimal Typography Oversized T-shirt",
+      price: 582,
+      realPrice: 799,
+      tribePrice: 522,
+    },
+    {
+      id: 16,
+      image:
+        "https://images.bewakoof.com/t1080/men-karma-circles-printed-t-shirt-540893-1663917710-1.jpg",
+      title: "Yellow Cart",
+      description: "Men's Green Karma Circles Tie & Dye T-shirt",
+      price: 537,
+      realPrice: 899,
+      tribePrice: 500,
+    },
+    {
+      id: 17,
+      image:
+        "https://images.bewakoof.com/t1080/men-s-bold-red-moon-rider-graphic-printed-oversized-t-shirt-502017-1667512641-1.jpg",
+      title: "Yellow Cart",
+      description:
+        "Men's Bold Red Moon Rider Graphic Printed Oversized T-shirt",
+      price: 537,
+      realPrice: 1100,
+      tribePrice: 520,
+    },
+    {
+      id: 18,
+      image:
+        "https://images.bewakoof.com/t640/the-ryuk-full-sleeve-t-shirt-554015-1667974706-1.jpg",
+      title: "Yellow Cart",
+      description: "Men's The Ryuk Graphic Printed T-shirt",
+      price: 349,
+      realPrice: 999,
+      tribePrice: 319,
+    },
+    {
+      id: 19,
+      image:
+        "https://images.bewakoof.com/t640/the-ryuk-oversized-full-sleeve-t-shirt-554016-1667974663-1.jpg",
+      title: "Yellow Cart",
+      description: "Men's The Ryuk Graphic Printed T-shirt",
+      price: 599,
+      realPrice: 1499,
+      tribePrice: 519,
+    },
+    {
+      id: 20,
+      image:
+        "https://images.bewakoof.com/t640/the-ryuk-half-sleeve-t-shirt-554010-1667975037-1.jpg",
+      title: "Yellow Cart",
+      description: "Men's The Ryuk Graphic Printed T-shirt",
+      price: 329,
+      realPrice: 999,
+      tribePrice: 309,
+    },
+
+    {
+      id: 21,
+      image:
+        "https://images.bewakoof.com/t640/men-s-black-what-the-duck-graphic-printed-oversized-t-shirt-553306-1667891652-1.jpg",
+      title: "Yellow Cart",
+      description: "Men's What the Duck Graphic Printed Oversized T-shirt",
+      price: 599,
+      realPrice: 1499,
+      tribePrice: 559,
+    },
+    {
+      id: 22,
+      image:
+        "https://images.bewakoof.com/t640/the-ryuk-oversized-t-shirt-554020-1667974943-1.jpg",
+      title: "Yellow Cart",
+      description: "Men's The Ryuk Graphic Printed T-shirt",
+      price: 649,
+      realPrice: 1499,
+      tribePrice: 599,
+    },
+    {
+      id: 23,
+      image:
+        "https://images.bewakoof.com/t640/the-ryuk-oversized-t-shirt-554011-1667974782-1.jpg",
+      title: "Yellow Cart",
+      description: "Men's The Ryuk Graphic Printed T-shirt",
+      price: 449,
+      realPrice: 1299,
+      tribePrice: 419,
+    },
+    {
+      id: 24,
+      image:
+        "https://images.bewakoof.com/t640/men-s-black-inspire-graphic-printed-oversized-t-shirt-553301-1667891608-1.jpg",
+      title: "Yellow Cart",
+      description: "Men's Black Reciept Typography Super Loose T-shirt",
+      price: 449,
+      realPrice: 1299,
+      tribePrice: 419,
+    },
+    {
+      id: 25,
+      image:
+        "https://images.bewakoof.com/t640/men-s-white-what-the-duck-graphic-printed-oversized-t-shirt-553308-1667891931-1.jpg",
+      title: "Yellow Cart",
+      description: "Men's What the Duck Graphic Printed Oversized T-shirt",
+      price: 599,
+      realPrice: 1499,
+      tribePrice: 559,
+    },
+    {
+      id: 26,
+      image:
+        "https://images.bewakoof.com/t640/the-ryuk-oversized-t-shirt-554011-1667974782-1.jpg",
+      title: "Yellow Cart",
+      description: "Men's White The Ryuk Graphic Printed T-shirt",
+      price: 449,
+      realPrice: 1299,
+      tribePrice: 419,
+    },
+    {
+      id: 27,
+      image:
+        "https://images.bewakoof.com/t640/men-s-blue-dope-bear-graphic-printed-oversized-t-shirt-547532-1667563188-1.jpg",
+      title: "Yellow Cart",
+      description: "Men's Blue Dope Graphic Printed Oversized T-shirt",
+      price: 537,
+      realPrice: 1299,
+      tribePrice: 489,
+    },
+    {
+      id: 28,
+      image:
+        "https://images.bewakoof.com/t640/men-s-verdant-green-toxic-typography-oversized-hoodie-t-shirt-540917-1667564036-1.jpg",
+      title: "Yellow Cart",
+      description: "Men's Verdant Graphic Printed T-shirt",
+      price: 627,
+      realPrice: 1299,
+      tribePrice: 600,
+    },
+    {
+      id: 29,
+      image:
+        "https://images.bewakoof.com/t1080/unisex-fit-black-angry-donald-printed-t-shirt-516696-1667400211-1.jpg",
+      title: "Yellow Cart",
+      description: "Unisex Black Angry Donald Graphic Printed T-shirt",
+      price: 799,
+      realPrice: 1200,
+      tribePrice: 600,
+    },
+    {
+      id: 30,
+      image:
+        "https://images.bewakoof.com/t1080/men-s-black-vibes-t-shirt-298518-1655747859-1.jpg",
+      title: "Yellow Cart",
+      description: "Men's Black Vibes T-shirt",
+      price: 447,
+      realPrice: 1299,
+      tribePrice: 400,
+    },
+    {
+      id: 31,
+      image:
+        "https://images.bewakoof.com/t1080/unisex-blue-mickey-color-block-t-shirt-516693-1667898801-1.jpg",
+      title: "Yellow Cart",
+      description: "Unisex Blue Mickey Color Block T-shirt",
+      price: 799,
+      realPrice: 1300,
+      tribePrice: 700,
+    },
+    {
+      id: 32,
+      image:
+        "https://images.bewakoof.com/t1080/men-s-yellowtail-game-over-minimal-typography-oversized-t-shirt-540906-1667499263-1.jpg",
+      title: "Yellow Cart",
+      description:
+        "Men's Yellowtail Game Over Minimal Typography Oversized T-shirt",
+      price: 582,
+      realPrice: 799,
+      tribePrice: 522,
+    },
+    {
+      id: 33,
+      image:
+        "https://images.bewakoof.com/t1080/men-karma-circles-printed-t-shirt-540893-1663917710-1.jpg",
+      title: "Yellow Cart",
+      description: "Men's Green Karma Circles Tie & Dye T-shirt",
+      price: 537,
+      realPrice: 899,
+      tribePrice: 500,
+    },
+    {
+      id: 34,
+      image:
+        "https://images.bewakoof.com/t1080/men-s-bold-red-moon-rider-graphic-printed-oversized-t-shirt-502017-1667512641-1.jpg",
+      title: "Yellow Cart",
+      description:
+        "Men's Bold Red Moon Rider Graphic Printed Oversized T-shirt",
+      price: 537,
+      realPrice: 1100,
+      tribePrice: 520,
+    },
+    {
+      id: 35,
+      image: "",
+      title: "Yellow Cart",
+      description: "Men's The Ryuk Graphic Printed T-shirt",
+      price: 0,
+      realPrice: 0,
+      tribePrice: 0,
+    },
+  ];
+
+  console.log(cartItem);
+  bag = cartItem;
+  displaydata(cartItem);
+
+  function search() {
+    let q = document.querySelector("input").value;
+    let newData = bag.filter(function (elem) {
+      return elem.title.toLowerCase().includes(q.toLowerCase());
+    });
+
+    displaydata(newData);
+  }
+
+  function handlesort() {
+    let selected = document.querySelector("select").value;
+    if (selected == "HTL") {
+      bag.sort((a, b) => b.price - a.price);
+    }
+    if (selected == "LTH") {
+      bag.sort((a, b) => a.price - b.price);
+    }
+    console.log(bag);
+    displaydata(bag);
+  }
+
+  function displaydata(data) {
+    document.querySelector("#mencontainer").innerHTML = "";
+    data.forEach((elem) => {
+      let div = document.createElement("div");
+
+      let img = document.createElement("img");
+      img.setAttribute("src", elem.image);
+
+      let title = document.createElement("h2");
+      title.innerText = elem.title;
+
+      let des = document.createElement("p");
+      des.innerText = elem.description;
+
+      let cost = document.createElement("p");
+      cost.innerText = elem.price;
+
+      let rcost = document.createElement("p");
+      rcost.innerText = elem.realPrice;
+
+      let tcost = document.createElement("p");
+      tcost.innerText = elem.tribePrice;
+
+      div.append(img, title, des, cost, rcost, tcost);
+
+      document.querySelector("#mencontainer").append(div);
+    });
+  }
+</script>
