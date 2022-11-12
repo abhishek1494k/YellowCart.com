@@ -14,12 +14,23 @@
   letter-spacing: 1px;
   background-color: transparent;
   border-radius: 5%;
-  transition: 0.5s;
+  transition: all 0.5s;
+  width: auto;
 }
+
 #menu-bar li a {
   text-decoration: none;
   color: rgb(72, 72, 72);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: small;
+}
+.menu1 {
+  display: none;
+  font-family: "Courier New", Courier, monospace;
+  font-size: small;
+}
+.menu1 ul li {
+  font-size: small;
 }
 
 #menu-bar li:hover {
@@ -27,21 +38,13 @@
   border-radius: 5%;
   transition:all 0.5s;
 }
-
-.menu1 {
-  display: none;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: medium;
-}
-.menu1 ul li{
-  font-size: small;
-}
-
 .submenu1 ul li{
   font-size: x-small;
 }
 
 #menu-bar li:hover .menu1 {
+  display: block;
+  position: absolute;
   display:block;
   position:absolute;
   background: rgb(255, 255, 255);
@@ -53,7 +56,7 @@
   display: block;
   margin-right: 50px;
   margin-left: -30px;
-  width:100%;
+  width: 100%;
 }
 #menu-bar li:hover .menu1 ul li {
   width:86%;
@@ -61,10 +64,11 @@
   margin-top: 5px;
   text-align: left;
 }
-.menu1 .submenu1{
+
+.menu1 .submenu1 {
   display: none;
   font-size: xx-small;
-  width:86%;
+  width: 86%;
 }
 
  .menu1:hover .submenu1 {
@@ -83,3 +87,4 @@
 #menu-bar li:hover .menu1 ul li:hover {
   background-color: rgb(255, 225, 0);
 }
+
