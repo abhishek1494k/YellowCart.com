@@ -464,18 +464,263 @@
 
 <script>
   let bag = [];
+let out=[
+    {
+        "id": "1",
+        "image": "https://images.bewakoof.com/t640/aks-blue-white-button-down-long-kurta-404751-1655816919-1.jpg",
+        "title": "Yellow Cart",
+        "description": "Anarkali",
+        "price": 495,
+        "realPrice": 1099,
+        "tribePrice": 469
+    },
+    {
+        "id": "2",
+        "image": "https://images.bewakoof.com/t640/aks-anarkali-404819-1656171600-1.jpg",
+        "title": "Yellow Cart",
+        "description": "Anarkali",
+        "price": 499,
+        "realPrice": 1199,
+        "tribePrice": 459
+    },
+    {
+        "id": "4",
+        "image": "https://images.bewakoof.com/t640/aks-pink-and-off-white-leheriya-print-kurta-404822-1656147058-1.jpg",
+        "title": "Yellow Cart",
+        "description": "Anarkali",
+        "price": 400,
+        "realPrice": 999,
+        "tribePrice": 379
+    },
+    {
+        "id": "5",
+        "image": "https://images.bewakoof.com/t640/aks-mustard-yellow-printed-button-down-a-line-kurta-404750-1656163232-1.jpg",
+        "title": "Yellow Cart",
+        "description": "Anarkali",
+        "price": 585,
+        "realPrice": 1299,
+        "tribePrice": 549
+    },
+    {
+        "id": "6",
+        "image": "https://images.bewakoof.com/t640/women-s-black-good-vibes-typography-oversized-t-shirt-554149-1668067984-1.jpg",
+        "title": "Yellow Cart",
+        "description": "Anarkali",
+        "price": 449,
+        "realPrice": 1299,
+        "tribePrice": 419
+    },
+    {
+        "id": "7",
+        "image": "https://images.bewakoof.com/t640/women-s-pink-oversized-t-shirt-463625-1667495692-1.jpg",
+        "title": "Yellow Cart",
+        "description": "oversized T-shirt",
+        "price": 499,
+        "realPrice": 849,
+        "tribePrice": 459
+    },
+    {
+        "id": "8",
+        "image": "https://images.bewakoof.com/t640/women-s-black-oversized-t-shirt-463568-1667553896-1.jpg",
+        "title": "Yellow Cart",
+        "description": "oversized T-shirt",
+        "price": 431,
+        "realPrice": 849,
+        "tribePrice": 399
+    },
+    {
+        "id": "10",
+        "image": "https://images.bewakoof.com/t640/give-me-break-oversized-fit-t-shirt-554130-1668148803-1.jpg",
+        "title": "Yellow Cart",
+        "description": "oversized T-shirt",
+        "price": 449,
+        "realPrice": 1299,
+        "tribePrice": 419
+    },
+    {
+        "id": "11",
+        "image": "https://images.bewakoof.com/t640/women-white-disney-original-crew-printed-t-shirt-516690-1667912070-1.jpg",
+        "title": "Yellow Cart",
+        "description": "oversized T-shirt",
+        "price": 699,
+        "realPrice": 1349,
+        "tribePrice": 639
+    },
+    {
+        "id": "12",
+        "image": "https://images.bewakoof.com/t640/women-s-green-good-vibes-typography-oversized-t-shirt-554153-1668080144-1.jpg",
+        "title": "Yellow Cart",
+        "description": "oversized T-shirt",
+        "price": 449,
+        "realPrice": 1299,
+        "tribePrice": 419
+    },
+    {
+        "id": "13",
+        "image": "https://images.bewakoof.com/t640/joey-doesn-t-share-food-oversized-fit-t-shirt-554142-1668148687-1.jpg",
+        "title": "Yellow Cart",
+        "description": "oversized T-shirt",
+        "price": 449,
+        "realPrice": 1299,
+        "tribePrice": 419
+    },
+    {
+        "id": "14",
+        "image": "https://images.bewakoof.com/t640/women-s-black-vibin-thrivin-oversized-t-shirt-549267-1668063573-1.jpg",
+        "title": "Yellow Cart",
+        "description": "oversized T-shirt",
+        "price": 699,
+        "realPrice": 1299,
+        "tribePrice": 639
+    },
+    {
+        "id": "15",
+        "image": "https://images.bewakoof.com/t640/women-aventurine-plain-t-shirt-546492-1668165377-1.jpg",
+        "title": "Yellow Cart",
+        "description": "oversized T-shirt",
+        "price": 599,
+        "realPrice": 999,
+        "tribePrice": 549
+    },
+    {
+        "id": "16",
+        "image": "https://images.bewakoof.com/t640/women-black-grey-stripe-lose-the-ego-printed-t-shirt-516684-1667898892-1.jpg",
+        "title": "Yellow Cart",
+        "description": "oversized T-shirt",
+        "price": 799,
+        "realPrice": 1449,
+        "tribePrice": 739
+    },
+    {
+        "id": "17",
+        "image": "https://images.bewakoof.com/t640/women-s-black-bored-teddy-oversized-t-shirt-549269-1668079641-1.jpg",
+        "title": "Yellow Cart",
+        "description": "oversized T-shirt",
+        "price": 799,
+        "realPrice": 1299,
+        "tribePrice": 739
+    },
+    {
+        "id": "18",
+        "image": "https://images.bewakoof.com/t640/women-s-mess-oversized-t-shirt-551747-1668079865-1.jpg",
+        "title": "Yellow Cart",
+        "description": "oversized T-shirt",
+        "price": 699,
+        "realPrice": 1299,
+        "tribePrice": 639
+    },
+    {
+        "id": "19",
+        "image": "https://images.bewakoof.com/t640/women-s-blue-good-vibes-typography-boyfriend-t-shirt-554148-1668067946-1.jpg",
+        "title": "Yellow Cart",
+        "description": "boyfriend T-shirt",
+        "price": 329,
+        "realPrice": 999,
+        "tribePrice": 309
+    },
+    {
+        "id": "20",
+        "image": "https://images.bewakoof.com/t640/bewakoof-customizable-women-black-boyfriend-fit-t-shirt-489856-1655814099-1.jpg",
+        "title": "Yellow Cart",
+        "description": "boyfriend T-shirt",
+        "price": 549,
+        "realPrice": 949,
+        "tribePrice": 509
+    },
+    {
+        "id": "21",
+        "image": "https://images.bewakoof.com/t640/bewakoof-customizable-women-white-boyfriend-fit-t-shirt-489854-1655816828-1.jpg",
+        "title": "Yellow Cart",
+        "description": "boyfriend T-shirt",
+        "price": 549,
+        "realPrice": 949,
+        "tribePrice": 509
+    },
+    {
+        "id": "22",
+        "image": "https://images.bewakoof.com/t640/customizable-women-s-red-boyfriend-t-shirt-540833-1662452084-1.jpg",
+        "title": "Yellow Cart",
+        "description": "boyfriend T-shirt",
+        "price": 549,
+        "realPrice": 849,
+        "tribePrice": 509
+    },
+    {
+        "id": "23",
+        "image": "https://images.bewakoof.com/t640/busy-doin-nothing-boyfriend-t-shirt-dl-pineapple-yellow-277532-1655748324-4.jpg",
+        "title": "Yellow Cart",
+        "description": "boyfriend T-shirt",
+        "price": 388,
+        "realPrice": 1099,
+        "tribePrice": 359
+    },
+    {
+        "id": "24",
+        "image": "https://images.bewakoof.com/t640/women-s-red-boyfriend-t-shirt-170465-1658918699-5.jpg",
+        "title": "Yellow Cart",
+        "description": "boyfriend T-shirt",
+        "price": 345,
+        "realPrice": 999,
+        "tribePrice": 319
+    },
+    {
+        "id": "25",
+        "image": "https://images.bewakoof.com/t640/lilac-bloom-boyfriend-t-shirt-346178-1666332891-6.jpg",
+        "title": "Yellow Cart",
+        "description": "boyfriend T-shirt",
+        "price": 388,
+        "realPrice": 999,
+        "tribePrice": 359
+    },
+    {
+        "id": "26",
+        "image": "https://images.bewakoof.com/t640/women-s-white-boyfriend-t-shirt-119167-1658407377-5.jpg",
+        "title": "Yellow Cart",
+        "description": "boyfriend T-shirt",
+        "price": 345,
+        "realPrice": 999,
+        "tribePrice": 319
+    },
+    {
+        "id": "27",
+        "image": "https://images.bewakoof.com/t640/women-s-black-boyfriend-t-shirt-103943-1655747757-5.jpg",
+        "title": "Yellow Cart",
+        "description": "boyfriend T-shirt",
+        "price": 345,
+        "realPrice": 999,
+        "tribePrice": 319
+    },
+    {
+        "id": "28",
+        "image": "https://images.bewakoof.com/t640/inner-peace-boyfriend-t-shirt-navy-blue-295707-1661352694-5.jpg",
+        "title": "Yellow Cart",
+        "description": "boyfriend T-shirt",
+        "price": 345,
+        "realPrice": 999,
+        "tribePrice": 319
+    },
+    {
+        "id": "29",
+        "image": "https://images.bewakoof.com/t640/smile-toroto-boyfriend-t-shirt-554297-1668173839-1.jpg",
+        "title": "Yellow Cart",
+        "description": "boyfriend T-shirt",
+        "price": 345,
+        "realPrice": 999,
+        "tribePrice": 319
+    },
+    {
+        "id": "30",
+        "image": "https://images.bewakoof.com/t640/women-s-black-aop-oversized-plus-size-t-shirt-521203-1667491387-1.jpg",
+        "title": "Yellow Cart",
+        "description": "Black AOP Oversized",
+        "price": 597,
+        "realPrice": 1299,
+        "tribePrice": 519
+    }
+]
 
-  let url = "https://637075f108218c267effc324.mockapi.io/products";
+displaydata(out);
 
-  async function getData() {
-    try {
-      let res = await fetch(url);
-      let out = await res.json();
-      console.log(out);
-      displaydata(out);
-    } catch (err) {}
-  }
-  getData();
 
   function search() {
     let q = document.querySelector("input").value;
