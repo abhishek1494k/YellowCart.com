@@ -40,6 +40,10 @@
       #mencontainer > div > h4{
         margin-left: 5px;
       }
+      #mencontainer > div > h4 ~ p:nth-child(4) {
+        margin-bottom: 5px;
+        margin-left: 5px;
+      }
       #mencontainer > div > h4 ~ p:nth-child(5) {
         font-size: small;
         margin-top: 5px;
@@ -509,7 +513,7 @@
       des.innerText = elem.description;
 
       let cost = document.createElement("p");
-      cost.innerText = "₹" + elem.price;
+      cost.innerText = elem.price;
 
       let rcost = document.createElement("p");
       rcost.innerText = "₹" + elem.realPrice;

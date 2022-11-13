@@ -259,7 +259,7 @@
       <h4>|</h4>
       <a href="login.html"><i class="fa-solid fa-user-ninja"></i></a>
       <p>🤍</p>
-      <a href="login.html"
+      <a href="cart.html"
         ><i class="fa-sharp fa-solid fa-cart-shopping"></i
       ></a>
       <p>
@@ -663,19 +663,35 @@
         bag.innerText = "❌";
         bag.addEventListener("click", function () {
           deleteData(data, i);
-          alert("⛔ Item Will be removed from Wishlist");
+          alert("⛔ Item will be Removed from Wishlist");
+        });
+        let cart = document.createElement("button");
+        cart.innerText = "💛";
+        cart.addEventListener("click", function () {
+          cartData(data, elem,i);
+          alert("✅ Item will be Moved to Cart");
         });
 
-        div.append(img, title, des, cost, tcost, bag);
+        div.append(img, title, des, cost, tcost, bag,cart);
 
         document.querySelector("#mencontainer").append(div);
       });
     }
   }
 
-  function deleteData(data, i) {
+  function deleteData(data,elem, i) {
     data.splice(i, 1);
     localStorage.setItem("wishlist", JSON.stringify(data));
     displaydata(data);
+    location.reload();
+  }
+  function cartData(data,elem,i) {
+    data.splice(i, 1);
+    localStorage.setItem("wishlist", JSON.stringify(data));
+    let cartArr=JSON.parse(localStorage.getItem("cart"))||[];
+    cartArr.push(elem)
+    localStorage.setItem("cart",JSON.stringify(cartArr))
+    displaydata(data);
+    location.reload();
   }
 </script>

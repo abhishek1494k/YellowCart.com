@@ -4,13 +4,134 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yellow Cart</title>
+    <title>Wishlist</title>
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="dropDown.css" />
     <script
       src="https://kit.fontawesome.com/71ecf3d565.js"
       crossorigin="anonymous"
     ></script>
+    <style>
+      #wishlist {
+        border: 1px solid rgb(255, 255, 255);
+        width: 50%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      #wishlist > img {
+        width: 30%;
+      }
+      #home {
+        padding: 5px;
+        color: rgb(0, 0, 0);
+        border: 2px solid rgb(255, 213, 0);
+        background-color: rgb(255, 255, 255);
+        font-size: small;
+        text-decoration: None;
+        margin-left: 25px;
+      } 
+      #home:hover {
+        padding: 4px;
+        color: rgb(255, 213, 0);
+        border: 3px solid rgb(255, 213, 0);
+        background-color: rgb(255, 255, 255);
+        font-size: small;
+      }
+
+      #mencontainer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        gap: 10px;
+        width: 90%;
+        margin: auto;
+        border: 1px solid rgb(255, 255, 255);
+        line-height: 10px;
+        margin-bottom: 10px;
+      }
+      #mencontainer > div > h4 + p {
+        font-size: x-small;
+        letter-spacing: 1px;
+        font-weight: 600;
+        color: rgb(100, 100, 100);
+        margin-left: 5px;
+      }
+      #mencontainer > div > h4 ~ p:nth-child(4) {
+        font-size: small;
+        margin-left: 10px;
+      }
+      #mencontainer > div > h4 ~ p:nth-child(5) {
+        background-color: rgb(236, 236, 236);
+        margin-left: 10px;
+        margin-right: 50px;
+        font-size: small;
+        border-radius: 5px;
+        padding: 2px;
+      }
+      #mencontainer > div > button:hover {
+        background-color: rgb(255, 213, 100);
+        padding: 5px;
+      }
+      #mencontainer > div > button {
+        margin-left: 100px;
+        margin-top: 10px;
+        transition-duration: 1s;
+        border-radius: 50%;
+        outline: none;
+        border: 1px solid transparent;
+        margin-bottom: 5px;
+      }
+      #mencontainer > div > h4 {
+        margin-left: 5px;
+        line-height: 1px;
+      }
+      #mencontainer > div {
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      }
+
+      #option {
+        width: 30%;
+        border: 1px solid rgb(255, 255, 255);
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        text-decoration: line-through;
+      }
+
+      img {
+        width: 100%;
+        filter: brightness(95%);
+        transition: filter 1.3s;
+      }
+
+      img:hover {
+        width: 101%;
+        filter: brightness(105%);
+      }
+
+      #mencontainer > div {
+        border: 2px solid rgb(255, 255, 255);
+      }
+      #mencontainer > div:hover {
+        border: 2px solid rgb(255, 213, 0);
+        background-color: rgb(255, 252, 240);
+        border-bottom-left-radius: 15px;
+      }
+      #cartValue{
+        margin-left: 10px;
+        font-size: large;
+        background-color: rgb(255, 240, 156);
+        border:1px solid  rgb(255, 240, 156);
+        border-radius: 20px;;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    </style>
   </head>
   <body>
     <div id="topNav">
@@ -83,7 +204,9 @@
                 <ul>
                   <a href="women_section.html"><li>New Arrivals</li></a>
                   <a href="women_section.html"><li>Top Wears</li></a>
-                  <a href="women_section.html"><li>Hoodies & Sweatshirts</li></a>
+                  <a href="women_section.html"
+                    ><li>Hoodies & Sweatshirts</li></a
+                  >
                   <a href="women_section.html"><li>Long Sleeve T-shirts</li></a>
                   <li>Printed T-shirts</li>
                   <li>Plain T-shirts</li>
@@ -156,171 +279,12 @@
         />
       </p>
     </div>
+    <hr />
+    <a id="home" href="index.html">Home</a>
+    <a id="cartValue" ><i class="fa-solid fa-cart-plus"></i></a>
+    <div id="wishlist"></div>
+    <div id="mencontainer"></div>
 
-    <div id="midNav">
-      <img
-        src="https://images.bewakoof.com/web/Gender-Picker-Banner-desktop-desktop-1-1667479003.jpg"
-        alt=""
-      />
-    </div>
-
-    <div id="image">
-      <div>
-        <img
-          src="https://images.bewakoof.com/web/Gender-Picker-Banner-desktop-desktop-men-2-1667479004.jpg"
-          alt=""
-        />
-      </div>
-      <div>
-        <img
-          src="https://images.bewakoof.com/web/Gender-Picker-Banner-desktop-desktop-women-3-1667479005.jpg"
-          alt=""
-        />
-      </div>
-    </div>
-
-    <div id="bottomNav">
-      <img
-        class="img"
-        src="https://images.bewakoof.com/web/Gender-Picker-Banner-desktop-desktop-4-1667479004.jpg"
-        alt=""
-      />
-    </div>
-    <h4 style="text-align: center; letter-spacing: 2px">
-      DISCOUNT PE DISCOUNT
-    </h4>
-    <div class="matrix2">
-      <div>
-        <img
-          width="100%"
-          src="https://images.bewakoof.com/uploads/grid/app/Mid-Size-Banner-Accessories-1666862308.gif"
-          alt=""
-        />
-      </div>
-      <div>
-        <img
-          width="100%"
-          src="https://images.bewakoof.com/uploads/grid/app/new-mid-banner-2022-buy2at899-1667809501.jpg"
-          alt=""
-        />
-      </div>
-      <div>
-        <img
-          width="100%"
-          src="https://images.bewakoof.com/uploads/grid/app/new-mid-banner-2022-plussize-store-men-1666532800.jpg"
-          alt=""
-        />
-      </div>
-      <div>
-        <img
-          width="100%"
-          src="https://images.bewakoof.com/uploads/grid/app/new-mid-banner-2022-buy2get1-1668060152.jpg"
-          alt=""
-        />
-      </div>
-    </div>
-
-    <div id="fiveX1">
-      <div>
-        <img
-          src="https://images.bewakoof.com/t320/men-black-plain-t-shirt-539556-1668071378-1.jpg"
-        />
-        <h6>₹ 600 <span>700</span></h6>
-      </div>
-      <div>
-        <img
-          src="https://images.bewakoof.com/t320/men-s-purple-wow-oversized-t-shirt-549266-1668083566-1.jpg"
-        />
-        <h6>₹ 549 <span>600</span></h6>
-      </div>
-      <div>
-        <img
-          src="https://images.bewakoof.com/t320/men-jonny-stripes-printed-t-shirt-516672-1667912683-1.jpg"
-        />
-        <h6>₹ 999 <span>1200</span></h6>
-      </div>
-      <div>
-        <img
-          src="https://images.bewakoof.com/t320/men-black-plain-t-shirt-539556-1668071378-1.jpg"
-        />
-        <h6>₹ 599 <span>750</span></h6>
-      </div>
-      <div>
-        <img
-          src="https://images.bewakoof.com/t320/mens-solid-t-shirt-516425-1668071420-1.jpg"
-        />
-        <h6>₹ 800 <span>999</span></h6>
-      </div>
-      <div>
-        <img
-          src="https://images.bewakoof.com/t320/men-s-purple-wow-oversized-t-shirt-549266-1668083566-1.jpg"
-        />
-        <h6>₹ 699 <span>700</span></h6>
-      </div>
-    </div>
-
-    <div id="threeX1">
-      <div>
-        <img
-          src="https://images.bewakoof.com/uploads/grid/app/bestsellers-1666693631.gif"
-        />
-      </div>
-      <div>
-        <img
-          src="https://images.bewakoof.com/uploads/grid/app/streetwear-common-new-1668157457.jpg"
-        />
-      </div>
-      <div>
-        <img
-          src="https://images.bewakoof.com/uploads/grid/app/1x1-mobile-cover-designer-phone-cover-1667987793.gif"
-        />
-      </div>
-    </div>
-
-    <h4 style="text-align: center; letter-spacing: 2px">
-      THE STOOPID COLLECTION
-    </h4>
-    <div class="matrix2">
-      <div>
-        <img
-          width="100%"
-          src="https://images.bewakoof.com/uploads/grid/app/jackets-mid-size-1667293853.jpg"
-          alt=""
-        />
-      </div>
-      <div>
-        <img
-          width="100%"
-          src="https://images.bewakoof.com/uploads/grid/app/new-mid-banner-2022-playbybewakoof-1666532963.jpg"
-          alt=""
-        />
-      </div>
-      <div>
-        <img
-          width="100%"
-          src="https://images.bewakoof.com/uploads/grid/app/undrdawg-mid-banner-1667495646.jpg"
-          alt=""
-        />
-      </div>
-      <div>
-        <img
-          width="100%"
-          src="https://images.bewakoof.com/uploads/grid/app/me-shirt-men-1658682131--1--1666890085.png"
-          alt=""
-        />
-      </div>
-    </div>
-    <img
-      class="img2"
-      src="https://images.bewakoof.com/uploads/grid/app/desktop---strip-1440---x-150---tribe-1634552003.png"
-      alt=""
-    />
-    <img
-      class="img2"
-      src="https://images.bewakoof.com/uploads/grid/app/VoteForDesign-ThinStrip-Desktop-Revised-1667372740.gif"
-      alt=""
-    />
-    
     <div id="container">
       <div id="bewakoof2">
         <h3>YellowC@rt</h3>
@@ -450,7 +414,17 @@
           <p>Xiomi</p>
         </div>
         <div id="teal">
-          <a style=" text-decoration: none;" href="offer.html"><h3 style="color: rgb(1, 207, 207); font-weight: 600;margin-bottom:30px; ">OFFERS</h3></a>
+          <a style="text-decoration: none" href="offer.html"
+            ><h3
+              style="
+                color: rgb(1, 207, 207);
+                font-weight: 600;
+                margin-bottom: 30px;
+              "
+            >
+              OFFERS
+            </h3></a
+          >
           <h3 style="color: rgb(1, 207, 207); font-weight: 600">FANBOOK</h3>
           <h3 style="color: rgb(1, 207, 207); font-weight: 600">SITEMAP</h3>
         </div>
@@ -460,7 +434,7 @@
         <p>
           Founded in 2012, Yellow Cart is a lifestyle fashion brand that makes
           creative, distinctive fashion for the trendy, contemporary Indian.
-          Yellow Cart was created on the principle of creating impact through
+          Bewakoof was created on the principle of creating impact through
           innovation, honesty and thoughtfulness.
         </p>
         <p>
@@ -649,41 +623,84 @@
 </html>
 
 <script>
-  document.getElementById("button").addEventListener("click", function () {
-    document.querySelector("#bg").style.display = "flex";
-  });
+  let data = JSON.parse(localStorage.getItem("cart")) || [];
+  displaydata(data);
 
-  document.getElementById("popup").addEventListener("submit", function (event) {
-    let flag = "no";
-    event.preventDefault();
-    let email = document.getElementById("email").value;
-    let emailArr = JSON.parse(localStorage.getItem("email")) || [];
+  function displaydata(data) {
+    if (data.length == 0) {
+      console.log(1234);
 
-    if (emailArr == [] && email !== " ") {
-      alert("✅ Thank You for Subscription");
+      let img = document.createElement("img");
+      img.setAttribute(
+        "src",
+        "https://images.bewakoof.com/images/doodles/empty-cart-page-doodle.png"
+      );
+
+      let des = document.createElement("p");
+      des.innerText = "Sorry, you haven't placed any Orders till now";
+
+      // let back = document.createElement("a");
+      // back.setAttribute("src", "login.html");
+
+      // let p=document.createElement("p")
+      // p.innerText="XXX";
+      // back.appendChild(p)
+
+      document.querySelector("#wishlist").appendChild(img);
+      document.querySelector("#wishlist").appendChild(des);
+      // document.querySelector("#wishlist").appendChild(back);
     } else {
-      emailArr.forEach((elem) => {
-        if (email == elem.email) {
-          flag = "yes";
-        }
+      document.querySelector("#mencontainer").innerHTML = "";
+      data.forEach((elem, i) => {
+        let div = document.createElement("div");
+
+        let img = document.createElement("img");
+        img.setAttribute("src", elem.image);
+
+        let title = document.createElement("h4");
+        title.innerText = elem.title;
+
+        let des = document.createElement("p");
+        des.innerText = elem.description;
+
+        let cost = document.createElement("p");
+        cost.innerText = "₹" + elem.price;
+
+        let tcost = document.createElement("p");
+        tcost.innerText = "₹" + elem.tribePrice + " For triBe Members";
+
+        let bag = document.createElement("button");
+        bag.innerText = "❌";
+        bag.addEventListener("click", function () {
+          deleteData(data, i);
+          alert("⛔ Item will be Removed from Wishlist");
+        });
+
+        div.append(img, title, des, cost, tcost, bag);
+
+        document.querySelector("#mencontainer").append(div);
       });
     }
+  }
 
-    if (flag === "yes") {
-      alert("❌ Already a Subscriber");
-    } else {
-      let obj = {
-        email,
-      };
-      emailArr.push(obj);
-      localStorage.setItem("email", JSON.stringify(emailArr));
-      alert("✅ Thank You for Subscription");
-    }
-    document.getElementById("email").value = "";
-    document.getElementById("name").value = "";
-  });
+  function deleteData(data,elem, i) {
+    data.splice(i, 1);
+    localStorage.setItem("cart", JSON.stringify(data));
+    displaydata(data);
+    location.reload();
+  }
+  function cartData(data,elem,i) {
+    data.splice(i, 1);
+    localStorage.setItem("wishlist", JSON.stringify(data));
+    localStorage.setItem("cart",JSON.stringify(elem))
+    displaydata(data);
+    location.reload();
+  }
 
-  document.querySelector(".close").addEventListener("click", function () {
-    document.querySelector("#bg").style.display = "none";
-  });
+  let value=JSON.parse(localStorage.getItem("cart")) || [];
+    let totalCost= value.reduce((acc,el)=>{
+      return acc+el.price;
+      location.reload();      
+    },0)
+    document.querySelector("#cartValue").innerText="₹ "+totalCost;
 </script>

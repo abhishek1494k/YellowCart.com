@@ -17,10 +17,10 @@
       }
       #loginImg > div:nth-child(1) {
         background-color: rgb(253, 241, 226);
-        width: 50%;
+        width: 60%;
       }
       #loginImg > div > div:nth-child(2) {
-        height: 200px;
+        height: 300px;
         background-color: rgb(253, 241, 226);
       }
       #bag {
@@ -265,10 +265,10 @@
         </h3>
         <div>
           <select id="mobile">
-            <option value=""></i>+91</option>
-            <option value=""></i>+92</option>
+            <option value="">+91</option>
+            <option value="">+971</option>
           </select>
-          <input type="text" placeholder="&ensp;Enter Mobile Number" />
+          <input maxlength="10" id="mobno" type="text" placeholder="&ensp;Enter Mobile Number" />
         </div>
         <button id="submit">CONTINUE</button>
         <p>__________________ OR ___________________</p>
@@ -285,3 +285,36 @@
     </div>
   </body>
 </html>
+<script>
+let mobno=document.querySelector("#mobno");
+let submit=document.querySelector("#submit")
+submit.addEventListener("click",()=>{
+  check(mobno.value)
+})
+
+function check(mobno){
+  let flag="No"
+  let arr=JSON.parse(localStorage.getItem("mob"))||[]
+  if(arr.length==0){
+      alert("✅ Enter OTP to Register")
+      arr.push(mobno)
+      localStorage.setItem("mob",JSON.stringify(arr))
+      location.href="otp1.html"
+      return;
+    }
+  for(let i=0; i<arr.length; i++){
+    if(arr[i]==mobno){
+      alert("💛 Welcome Back")
+      flag="yes";
+      location.href="otp.html"
+      break;
+    } 
+  } 
+  if(flag=="No"){
+      alert("✅ Enter OTP to Register")
+      arr.push(mobno)
+      localStorage.setItem("mob",JSON.stringify(arr))
+      location.href="otp1.html"
+  }
+}
+</script>

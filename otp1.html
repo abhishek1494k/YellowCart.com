@@ -1,0 +1,69 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        background-color: rgb(255, 242, 195);
+      }
+      div {
+        width: 350px;
+        height: 350px;
+        margin: auto;
+        margin-top: 100px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        background-color: rgb(255, 200, 0);
+        border-radius: 10px;
+      }
+      input {
+        text-align: center;
+        width: 250px;
+        font-size: larger;
+        margin-bottom: 30px;
+        background-color: white;
+      }
+      h1 {
+        background-color: rgb(255, 200, 0);
+      }
+      button {
+        background-color: rgb(255, 255, 255);
+        padding: 10px;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Enter Details</h1>
+      <input
+        placeholder="Enter Name"
+        type="text"
+      />
+      <input
+      placeholder=" Enter Email Address"
+      type="email"
+    />
+      <button>Submit</button>
+    </div>
+  </body>
+</html>
+<script>
+  document.querySelector("button").addEventListener("click", function () {
+    check();
+  });
+
+  function check() {
+    alert("✅ Submit OTP to Register Successfully");
+    location.href="otp.html"
+    }
+</script>
