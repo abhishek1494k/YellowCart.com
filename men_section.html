@@ -13,73 +13,211 @@
     ></script>
     <style>
 
+      * {
+        margin: 0;
+        padding: 0;
+        user-select: none;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        list-style: none;
+      }
+
       #mencontainer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
-        gap: 5px;
-        width: 50%;
+        gap: 15px;
+        width: 80%;
         height: auto;
-        margin-left: 280px;
+      }
+      #mencontainer > div > h4 + p {
+        font-size: x-small;
+        letter-spacing: 1px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-weight: 600;
+        color: rgb(100, 100, 100);
+        margin-left: 5px;
+      }
+      #mencontainer > div > h4 ~ p:nth-child(5) {
+        font-size: small;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 5px;
+      }
+      #mencontainer > div > h4 ~ p:nth-child(6) {
+        background-color: rgb(236, 236, 236);
+        margin-left: 10px;
+        margin-right: 85px;
+        font-size: small;
+        border-radius: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
 
       }
-      img {
-        width: 100%;
+      #mencontainer > div > button:hover {
+        background-color: rgb(255, 213, 100);
+        padding:5px;
       }
-      #mencontainer > div {
-        border: 2px solid black;
+      #mencontainer > div > button {
+        margin-left: 100px;
+        margin-top: 10px;
+        transition-duration:1s;
+        border-radius: 50%;
+        outline: none;
+        border: 1px solid transparent;
+        margin-bottom: 5px;
       }
+      #mencontainer > div > h4{
+        margin-left: 5px;
+      }
+
       #option {
-        position: fixed;
-        width: 80%;
-        border: 1px solid black;
-      }
-      #option {
+        width: 30%;
+        border: 1px solid rgb(255, 255, 255);
         height: 500px;
+        display: flex;
+        flex-direction: column;
+        text-decoration: line-through;
+      }
+
+      img {
+        width: 100%;       
+        filter:brightness(95%);
+        transition: filter 1.3s;
+      }
+
+      img:hover {
+        width: 101%;
+        filter:brightness(105%);
+
+      }
+
+      #mencontainer > div {
+        border: 2px solid rgb(255, 255, 255);
+      }
+      #mencontainer > div:hover {
+        border: 2px solid rgb(255, 213, 0);
+        background-color:rgb(255, 252, 240);
+        border-bottom-left-radius: 15px;
       }
       #sort {
         padding: 10px;
         border: 0;
         outline: none;
-        margin-left: 880px;
-        height:auto;
+        margin-left: 900px;
+        height: auto;
       }
-      /* @media screen and (min-width: 701px) and (max-width: 1000px) {
-        #mencontainer {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: auto;
-          gap: 20px;
-        }
+      /* --------------------------------- */
+      .sidebar {
+        position: fixed;
+        width: 26.5%;
+        height: auto;
+        background-color: rgb(255, 255, 255);
+        top: 0;
+        left: 0;
+      }
+      .sidebar .text {
+        /* font-size: 25px;
+        font-weight: 600;
+        line-height: 60px;
+        text-align: center;
+        letter-spacing: 1px; */
+        height: 132px;
+      }
+      nav ul {
+        height: 100%;
+        width: 80%;
+        list-style: none;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        border-radius: 10px;
+        color: rgb(110, 109, 109);
       }
 
-      @media screen and (min-width: 101px) and (max-width: 700px) {
-        #mencontainer {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: auto;
-          gap: 20px;
-        }
+      nav ul li {
+        line-height: 30px;
+        border-bottom: 1px solid black;
+        color: rgb(110, 109, 109);
+      }
+
+      nav ul li a {
+        color: black;
+        text-decoration: none;
+        font-size: 15px;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 40px;
+        width: 100%;
+        border-left: 6px solid transparent;
+        position: relative;
+        transition: all 1s;
+        color: rgb(110, 109, 109);
+      }
+
+      nav ul li a:hover {
+        /* background-color: rgb(255, 213, 0); */
+        border-left: 15px solid rgb(255, 213, 0);
+        transition-duration:1s;
+      }
+
+      nav ul ul {
+        position: static;
+        display: none;
+        transition: 2s;
+      }
+      nav ul li:hover ul {
+        display: block;
+        border: 1px solid rgb(255, 255, 255);
+        transition: 2s;
+        transition-duration:1s;
+      }
+
+      /* nav ul ul li {
+        line-height: 40px;
+        border-bottom: none;
       } */
+
+      nav ul ul li a {
+        padding-left: 20px;
+      }
+      nav ul ul li {
+        font-size: small;
+        border-bottom: 1px solid rgb(255, 255, 255);
+      }
+      nav ul ul li:hover {
+        background-color: rgb(255, 234, 0);
+        border-radius: 10px;
+        transition-duration:1s;
+      }
+
+      nav ul li a span {
+        position: absolute;
+        top: 50%;
+        left: 200px;
+        font-size: 100px;
+        transform: translateY(-50%);
+        font-size: 22px;
+        transition: transform 0.8s;
+      }
+      nav ul li:hover a span {
+        transform: translateY(-50%) rotate(-180deg);
+      }
     </style>
   </head>
   <body>
-    <div id="topNav">
-      <p>Offer</p>
-      <a href="fanbook.html">Fanbook</a>
-      <p>Download App</p>
-      <p>TriBe Membership</p>
-      <div></div>
-      <p>Contact Us</p>
-      <p>Track Order</p>
-    </div>
-
-    <div id="nav">
+    <div
+      id="nav"
+      style="
+        width: 65%;
+        margin-left: 350px;
+        border: 1px solid rgb(255, 255, 255);
+      "
+    >
       <a href="index.html"><img id="bewakoof" src="logo.png" /></a>
       <div id="menu-bar">
         <li>
           <a href="#">MENS</a>
-          <div class="menu1">
+          <!-- <div class="menu1">
             <ul>
               <li>Top Wear</li>
               <div class="submenu1">
@@ -124,13 +262,13 @@
                 </ul>
               </div>
             </ul>
-          </div>
+          </div> -->
         </li>
         <li>
           <a href="#">WOMENS</a>
-          <div class="menu1">
+          <!-- <div class="menu1">
             <ul>
-              <li>TOP WEAR</li>
+              <li>Top Wear</li>
               <div class="submenu1">
                 <ul>
                   <li>New Arrival</li>
@@ -145,7 +283,8 @@
                   <li>Plus Size Store</li>
                 </ul>
               </div>
-              <li>BOTTOM WEAR</li>
+              <li>Bottom Wear</li>
+
               <div class="submenu1">
                 <ul>
                   <li>Pajamas</li>
@@ -155,14 +294,16 @@
                   <li>Pants</li>
                 </ul>
               </div>
-              <li>BAGS</li>
+              <li>Bags</li>
+
               <div class="submenu1">
                 <ul>
                   <li>Small Bag</li>
                   <li>Purse</li>
                 </ul>
               </div>
-              <li>FEATURED</li>
+              <li>Featured</li>
+
               <div class="submenu1">
                 <ul>
                   <li>Flip Flops</li>
@@ -170,11 +311,11 @@
                 </ul>
               </div>
             </ul>
-          </div>
+          </div> -->
         </li>
         <li>
           <a href="#">MOBILE COVER</a>
-          <div class="menu1">
+          <!-- <div class="menu1">
             <ul>
               <li>Apple</li>
               <li>Vivo</li>
@@ -184,19 +325,10 @@
               <li>Oppo</li>
               <li>Xiomi</li>
             </ul>
-          </div>
+          </div> -->
         </li>
       </div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <i id="search" class="fa-sharp fa-solid fa-magnifying-glass"></i>
-      <input
-        type="text"
-        placeholder="Search by product,category or collection"
-      />
+      <!-- <div style="width:10px" ></div> -->
       <h4>|</h4>
       <p><i class="fa-solid fa-user-ninja"></i></p>
       <p>🤍</p>
@@ -209,14 +341,17 @@
         />
       </p>
     </div>
-    <hr />
-
     <!-- <button><a href="cart.html">Cart</a></button> -->
-    <p style="font-size: small; color: rgb(110, 106, 106); margin-left:120px;">
-      Home / Men Clothing / Men's T-Shirts / Printed T-Shirts for Men
-    </p>
-    <h2 style="margin-left:120px;" >
-      <span style="border-bottom: 4px solid rgb(255, 213, 0);">Printed</span>
+    <br />
+    <h2
+      style="
+        text-align: center;
+        margin-left: -220px;
+        color: rgb(109, 107, 107);
+        font-size: medium;
+      "
+    >
+      <span style="border-bottom: 4px solid rgb(255, 215, 16)">Printed</span>
       Printed T-Shirts for Men
     </h2>
     <select id="sort" onchange="handlesort()">
@@ -224,10 +359,109 @@
       <option value="HTL">Price:High to Low</option>
       <option value="LTH">Price:Low to High</option>
     </select>
-
-      <!-- <div id="option"></div> -->
+    <div
+      style="
+        display: flex;
+        margin: auto;
+        border: 1px solid rgb(255, 255, 255);
+        width: 90%;
+      "
+    >
+      <div id="option">
+        <nav class="sidebar">
+          <div class="text"></div>
+          <ul>
+            <li><a href="#">Filters</a></li>
+            <li>
+              <a href="#"
+                >Gender
+                <span class="fas fa-caret-down"> </span>
+              </a>
+              <ul>
+                <li><a href="#"></a>Men</li>
+                <li><a href="#"></a>Women</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"
+                >Sizes
+                <span class="fas fa-caret-down"> </span>
+              </a>
+              <ul>
+                <li><a href="#"></a>S</li>
+                <li><a href="#"></a>M</li>
+                <li><a href="#"></a>L</li>
+                <li><a href="#"></a>XL</li>
+                <li><a href="#"></a>XX-L</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"
+                >Fit
+                <span class="fas fa-caret-down"> </span>
+              </a>
+              <ul>
+                <li><a href="#"></a>Regular Fit</li>
+                <li><a href="#"></a>Small Fit</li>
+                <li><a href="#"></a>Over Sized</li>
+                <li><a href="#"></a>Loose Fit</li>
+                <li><a href="#"></a>Super Loose</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"
+                >Neck
+                <span class="fas fa-caret-down"> </span>
+              </a>
+              <ul>
+                <li><a href="#"></a>Round</li>
+                <li><a href="#"></a>Polo</li>
+                <li><a href="#"></a>Hooded</li>
+                <li><a href="#"></a>Mock</li>
+                <li><a href="#"></a>V-Neck</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"
+                >Sleeve
+                <span class="fas fa-caret-down"> </span>
+              </a>
+              <ul>
+                <li><a href="#"></a>Half</li>
+                <li><a href="#"></a>Full</li>
+                <li><a href="#"></a>Sleeveless</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"
+                >Design
+                <span class="fas fa-caret-down"> </span>
+              </a>
+              <ul>
+                <li><a href="#"></a>Graphic Printed</li>
+                <li><a href="#"></a>Printed</li>
+                <li><a href="#"></a>Typography</li>
+                <li><a href="#"></a>Color Block</li>
+                <li><a href="#"></a>Tie & Dye</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"
+                >Type
+                <span class="fas fa-caret-down"> </span>
+              </a>
+              <ul>
+                <li><a href="#"></a>T-Shirt</li>
+                <li><a href="#"></a>Varsity</li>
+                <li><a href="#"></a>Hoodies</li>
+                <li><a href="#"></a>Polo</li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
       <div id="mencontainer"></div>
-
+    </div>
   </body>
 </html>
 
@@ -341,7 +575,7 @@
         "https://images.bewakoof.com/t640/men-s-verdant-green-toxic-typography-oversized-hoodie-t-shirt-540917-1667564036-1.jpg",
       title: "Yellow Cart",
       description: "Men's Verdant Graphic Printed T-shirt",
-      price: 627,
+      price: 677,
       realPrice: 1299,
       tribePrice: 600,
     },
@@ -351,7 +585,7 @@
         "https://images.bewakoof.com/t1080/unisex-fit-black-angry-donald-printed-t-shirt-516696-1667400211-1.jpg",
       title: "Yellow Cart",
       description: "Unisex Black Angry Donald Graphic Printed T-shirt",
-      price: 799,
+      price: 709,
       realPrice: 1200,
       tribePrice: 600,
     },
@@ -361,7 +595,7 @@
         "https://images.bewakoof.com/t1080/men-s-black-vibes-t-shirt-298518-1655747859-1.jpg",
       title: "Yellow Cart",
       description: "Men's Black Vibes T-shirt",
-      price: 447,
+      price: 547,
       realPrice: 1299,
       tribePrice: 400,
     },
@@ -371,9 +605,9 @@
         "https://images.bewakoof.com/t1080/unisex-blue-mickey-color-block-t-shirt-516693-1667898801-1.jpg",
       title: "Yellow Cart",
       description: "Unisex Blue Mickey Color Block T-shirt",
-      price: 799,
+      price: 679,
       realPrice: 1300,
-      tribePrice: 700,
+      tribePrice: 600,
     },
     {
       id: 15,
@@ -382,7 +616,7 @@
       title: "Yellow Cart",
       description:
         "Men's Yellowtail Game Over Minimal Typography Oversized T-shirt",
-      price: 582,
+      price: 682,
       realPrice: 799,
       tribePrice: 522,
     },
@@ -392,7 +626,7 @@
         "https://images.bewakoof.com/t1080/men-karma-circles-printed-t-shirt-540893-1663917710-1.jpg",
       title: "Yellow Cart",
       description: "Men's Green Karma Circles Tie & Dye T-shirt",
-      price: 537,
+      price: 637,
       realPrice: 899,
       tribePrice: 500,
     },
@@ -403,9 +637,10 @@
       title: "Yellow Cart",
       description:
         "Men's Bold Red Moon Rider Graphic Printed Oversized T-shirt",
-      price: 537,
+      price: 737,
       realPrice: 1100,
-      tribePrice: 520,
+      tribePrice: 620,
+
     },
     {
       id: 18,
@@ -413,9 +648,9 @@
         "https://images.bewakoof.com/t640/the-ryuk-full-sleeve-t-shirt-554015-1667974706-1.jpg",
       title: "Yellow Cart",
       description: "Men's The Ryuk Graphic Printed T-shirt",
-      price: 349,
+      price: 949,
       realPrice: 999,
-      tribePrice: 319,
+      tribePrice: 819,
     },
     {
       id: 19,
@@ -423,9 +658,10 @@
         "https://images.bewakoof.com/t640/the-ryuk-oversized-full-sleeve-t-shirt-554016-1667974663-1.jpg",
       title: "Yellow Cart",
       description: "Men's The Ryuk Graphic Printed T-shirt",
-      price: 599,
+      price: 399,
       realPrice: 1499,
-      tribePrice: 519,
+      tribePrice: 319,
+
     },
     {
       id: 20,
@@ -524,7 +760,7 @@
         "https://images.bewakoof.com/t1080/unisex-fit-black-angry-donald-printed-t-shirt-516696-1667400211-1.jpg",
       title: "Yellow Cart",
       description: "Unisex Black Angry Donald Graphic Printed T-shirt",
-      price: 799,
+      price: 899,
       realPrice: 1200,
       tribePrice: 600,
     },
@@ -544,7 +780,7 @@
         "https://images.bewakoof.com/t1080/unisex-blue-mickey-color-block-t-shirt-516693-1667898801-1.jpg",
       title: "Yellow Cart",
       description: "Unisex Blue Mickey Color Block T-shirt",
-      price: 799,
+      price: 719,
       realPrice: 1300,
       tribePrice: 700,
     },
@@ -569,29 +805,9 @@
       realPrice: 899,
       tribePrice: 500,
     },
-    {
-      id: 34,
-      image:
-        "https://images.bewakoof.com/t1080/men-s-bold-red-moon-rider-graphic-printed-oversized-t-shirt-502017-1667512641-1.jpg",
-      title: "Yellow Cart",
-      description:
-        "Men's Bold Red Moon Rider Graphic Printed Oversized T-shirt",
-      price: 537,
-      realPrice: 1100,
-      tribePrice: 520,
-    },
-    {
-      id: 35,
-      image: "",
-      title: "Yellow Cart",
-      description: "Men's The Ryuk Graphic Printed T-shirt",
-      price: 0,
-      realPrice: 0,
-      tribePrice: 0,
-    },
   ];
 
-  console.log(cartItem);
+
   bag = cartItem;
   displaydata(cartItem);
 
@@ -624,24 +840,42 @@
       let img = document.createElement("img");
       img.setAttribute("src", elem.image);
 
-      let title = document.createElement("h2");
+
+      let title = document.createElement("h4");
+
       title.innerText = elem.title;
 
       let des = document.createElement("p");
       des.innerText = elem.description;
 
       let cost = document.createElement("p");
-      cost.innerText = elem.price;
+      cost.innerText = "₹" + elem.price;
 
       let rcost = document.createElement("p");
-      rcost.innerText = elem.realPrice;
+      rcost.innerText = "₹" + elem.realPrice;
+      rcost.style.textDecoration = "line-through";
+      rcost.style.color = "red";
 
       let tcost = document.createElement("p");
-      tcost.innerText = elem.tribePrice;
+      tcost.innerText = "₹" + elem.tribePrice + " For triBe Members";
 
-      div.append(img, title, des, cost, rcost, tcost);
+      let bag = document.createElement("button");
+      bag.innerText = "🤍";
+      bag.addEventListener("click",function(){
+        alert("💛 Item Added to Wishlist")
+        addData(elem)
+      })
 
+      div.append(img, title, des, cost, rcost, tcost, bag);
       document.querySelector("#mencontainer").append(div);
     });
   }
+
+function addData(elem){
+  console.log(elem)
+  let data= JSON.parse(localStorage.getItem("wishlist"))||[];
+  data.push(elem)
+  localStorage.setItem("wishlist",JSON.stringify(data))
+}
+
 </script>

@@ -47,8 +47,7 @@ input {
   padding: 5px 5px;
   border: 1px solid#e4e4e4;
   background-color: #e4e4e4;
-
-  margin-left: -22px;
+  margin-left: -26px;
   border: 0;
   outline: none;
 }
@@ -60,11 +59,13 @@ input:hover {
   font-weight: 600;
   border: 0;
   outline: none;
+  background-color: white;
 }
-
 #search{
   background-color: #e4e4e4;
-  padding:7.5px;
+  padding:7px;
+}
+
 }
 #india{
   border-radius: 50%;
@@ -113,8 +114,9 @@ input:hover {
   }
   #topNav > div {
     width: 40%;
+    /* border: 1px solid black; */
   }
-
+}
 
 #matrix2{
   display: grid;
@@ -286,13 +288,12 @@ input:hover {
   justify-content: center;
   align-items: center;
   display: none;
-  margin-top:1400px;
-
+  margin-top:3000px;
 }
 
 #bg-content{
   width:300px;
-  height:200px;
+  height:230px;
   background-color: white;
   opacity: 1;
   border-radius: 10px;
@@ -346,3 +347,48 @@ input:hover {
 .close:hover{
   cursor: grab;
 }
+
+
+#fiveX1{
+  display:flex;
+  flex-direction: row;
+  width:95%;
+  justify-content: space-between;
+  margin: auto;
+  gap:10px;
+}
+#fiveX1>div{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+#fiveX1>div>img:hover{
+  width:105%;
+  filter: brightness(99%);
+}
+
+#fiveX1>div>img{
+  width:100%;
+  filter: brightness(50%);
+  transition: filter 0.5s;
+}
+#fiveX1>div>h6{
+  line-height: 0px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+#fiveX1>div>h6 span{
+  text-decoration: line-through;
+  color: red;
+}
+
+#threeX1{
+  display:flex;
+  width:100%;
+  border:3px solid rgb(255, 255, 255);
+  margin-top:30px;
+  gap:20px;
+}
+#threeX1>div>img{
+  width: 100%;
+}
+

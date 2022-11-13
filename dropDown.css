@@ -18,6 +18,10 @@
   width: auto;
 }
 
+#menu-bar li:hover {
+  background-color: rgb(255, 239, 118);
+  transition: all 0.5s;
+}
 #menu-bar li a {
   text-decoration: none;
   color: rgb(72, 72, 72);
@@ -45,8 +49,6 @@
 #menu-bar li:hover .menu1 {
   display: block;
   position: absolute;
-  display:block;
-  position:absolute;
   background: rgb(255, 255, 255);
   margin-top: 10px;
   padding-left: -25px;
@@ -59,12 +61,11 @@
   width: 100%;
 }
 #menu-bar li:hover .menu1 ul li {
-  width:86%;
+  width: 86%;
   padding: 5px;
   margin-top: 5px;
   text-align: left;
 }
-
 .menu1 .submenu1 {
   display: none;
   font-size: xx-small;
@@ -87,4 +88,3 @@
 #menu-bar li:hover .menu1 ul li:hover {
   background-color: rgb(255, 225, 0);
 }
-
