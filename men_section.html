@@ -202,6 +202,10 @@
       nav ul li:hover a span {
         transform: translateY(-50%) rotate(-180deg);
       }
+      #mencontainer > div > h4 ~ p:nth-child(4) {
+        margin-bottom: 5px;
+        margin-left: 5px;
+      }
     </style>
   </head>
   <body>
@@ -330,9 +334,11 @@
       </div>
       <!-- <div style="width:10px" ></div> -->
       <h4>|</h4>
-      <p><i class="fa-solid fa-user-ninja"></i></p>
-      <p>🤍</p>
-      <p><i class="fa-sharp fa-solid fa-cart-shopping"></i></p>
+      <a href="login.html"><i class="fa-solid fa-user-ninja"></i></a>
+      <a style="text-decoration:none" href="wishlist.html"><p>🤍</p></a>
+      <a href="login.html"
+        ><i class="fa-sharp fa-solid fa-cart-shopping"></i
+      ></a>
       <p>
         <img
           id="india"
@@ -346,13 +352,13 @@
     <h2
       style="
         text-align: center;
-        margin-left: -220px;
+        margin-left: -290px;
         color: rgb(109, 107, 107);
         font-size: medium;
       "
     >
       <span style="border-bottom: 4px solid rgb(255, 215, 16)">Printed</span>
-      Printed T-Shirts for Men
+     T-Shirts for Men
     </h2>
     <select id="sort" onchange="handlesort()">
       <option value="">SORT BY:</option>
@@ -849,7 +855,7 @@
       des.innerText = elem.description;
 
       let cost = document.createElement("p");
-      cost.innerText = "₹" + elem.price;
+      cost.innerText = elem.price;
 
       let rcost = document.createElement("p");
       rcost.innerText = "₹" + elem.realPrice;
