@@ -12,6 +12,7 @@
       crossorigin="anonymous"
     ></script>
     <style>
+
       * {
         margin: 0;
         padding: 0;
@@ -20,6 +21,7 @@
         font-family: Arial, Helvetica, sans-serif;
         list-style: none;
       }
+
       #mencontainer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -286,6 +288,7 @@
                 </ul>
               </div>
               <li>Bottom Wear</li>
+
               <div class="submenu1">
                 <ul>
                   <li>Pajamas</li>
@@ -296,6 +299,7 @@
                 </ul>
               </div>
               <li>Bags</li>
+
               <div class="submenu1">
                 <ul>
                   <li>Small Bag</li>
@@ -303,6 +307,7 @@
                 </ul>
               </div>
               <li>Featured</li>
+
               <div class="submenu1">
                 <ul>
                   <li>Flip Flops</li>
@@ -641,6 +646,7 @@
       price: 737,
       realPrice: 1100,
       tribePrice: 620,
+
     },
     {
       id: 18,
@@ -661,6 +667,7 @@
       price: 399,
       realPrice: 1499,
       tribePrice: 319,
+
     },
     {
       id: 20,
@@ -804,8 +811,8 @@
       realPrice: 899,
       tribePrice: 500,
     },
-
   ];
+
 
   bag = cartItem;
   displaydata(cartItem);
@@ -839,7 +846,9 @@
       let img = document.createElement("img");
       img.setAttribute("src", elem.image);
 
+
       let title = document.createElement("h4");
+
       title.innerText = elem.title;
 
       let des = document.createElement("p");
@@ -864,7 +873,6 @@
       })
 
       div.append(img, title, des, cost, rcost, tcost, bag);
-
       document.querySelector("#mencontainer").append(div);
     });
   }
@@ -875,4 +883,5 @@ function addData(elem){
   data.push(elem)
   localStorage.setItem("wishlist",JSON.stringify(data))
 }
+
 </script>

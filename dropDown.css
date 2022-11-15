@@ -17,6 +17,7 @@
   transition: all 0.5s;
   width: auto;
 }
+
 #menu-bar li:hover {
   background-color: rgb(255, 239, 118);
   transition: all 0.5s;
@@ -36,7 +37,12 @@
   font-size: small;
 }
 
-.submenu1 ul li {
+#menu-bar li:hover {
+  background-color: rgb(255, 239, 118);
+  border-radius: 5%;
+  transition:all 0.5s;
+}
+.submenu1 ul li{
   font-size: x-small;
 }
 
@@ -65,7 +71,8 @@
   font-size: xx-small;
   width: 86%;
 }
-.menu1:hover .submenu1 {
+
+ .menu1:hover .submenu1 {
   /* display: block;
   position: absolute;
   background: rgb(255, 255, 255);
