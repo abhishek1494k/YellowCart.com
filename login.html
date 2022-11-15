@@ -232,9 +232,9 @@
         placeholder="Search by product,category or collection"
       />
       <h4>|</h4>
-      <p><i class="fa-solid fa-user-ninja"></i></p>
-      <p>🤍</p>
-      <p><i class="fa-sharp fa-solid fa-cart-shopping"></i></p>
+      <a href="#"><p><i class="fa-solid fa-user-ninja"></i></p></a>
+      <a href="wishlist.html"><p>🤍</p></a>
+      <a href="cart.html"><p><i class="fa-sharp fa-solid fa-cart-shopping"></i></p></a>
       <p>
         <img
           id="india"
@@ -296,7 +296,7 @@ function check(mobno){
   let flag="No"
   let arr=JSON.parse(localStorage.getItem("mob"))||[]
   if(arr.length==0){
-      alert("✅ Enter OTP to Register")
+      alert("🔡 Submit Details to Register")
       arr.push(mobno)
       localStorage.setItem("mob",JSON.stringify(arr))
       location.href="otp1.html"
@@ -311,7 +311,7 @@ function check(mobno){
     } 
   } 
   if(flag=="No"){
-      alert("✅ Enter OTP to Register")
+      alert("🔡 Submit Details to Register")
       arr.push(mobno)
       localStorage.setItem("mob",JSON.stringify(arr))
       location.href="otp1.html"

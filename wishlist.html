@@ -679,11 +679,11 @@
     }
   }
 
-  function deleteData(data,elem, i) {
+  function deleteData(data,i) {
     data.splice(i, 1);
     localStorage.setItem("wishlist", JSON.stringify(data));
     displaydata(data);
-    location.reload();
+    reset();
   }
   function cartData(data,elem,i) {
     data.splice(i, 1);
@@ -692,6 +692,11 @@
     cartArr.push(elem)
     localStorage.setItem("cart",JSON.stringify(cartArr))
     displaydata(data);
+    reset();
+  }
+
+  function reset(){
     location.reload();
+    return 0;
   }
 </script>
