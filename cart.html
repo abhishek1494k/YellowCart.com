@@ -20,7 +20,7 @@
         flex-direction: column;
         align-items: center;
         align-content: center;
-        margin-top: 50px;
+        margin-top: 0px;
         margin-bottom: 50px;
       }
       #wishlist > img {
@@ -637,7 +637,7 @@
       );
 
       let des = document.createElement("p");
-      des.innerText = "Sorry, you haven't placed any Orders till now";
+      des.innerText = "Sorry, your Cart is Empty !";
 
       // let back = document.createElement("a");
       // back.setAttribute("src", "login.html");
@@ -683,24 +683,35 @@
     }
   }
 
-  function deleteData(data,elem, i) {
+  function deleteData(data,i) {
     data.splice(i, 1);
     localStorage.setItem("cart", JSON.stringify(data));
-    displaydata(data);
-    location.reload();
+    // displaydata(data);
+    reset();
   }
-  function cartData(data,elem,i) {
-    data.splice(i, 1);
-    localStorage.setItem("wishlist", JSON.stringify(data));
-    localStorage.setItem("cart",JSON.stringify(elem))
-    displaydata(data);
+
+  function reset(){
     location.reload();
+    return 0;
   }
+    //Cart delete function
+  //   function deleteData(data, i) {
+  //   data.splice(i, 1);
+  //   localStorage.setItem("cart", JSON.stringify(data));
+  //   reset();
+  // }
+  // function cartData(data,elem,i) {
+  //   data.splice(i, 1);
+  //   localStorage.setItem("wishlist", JSON.stringify(data));
+  //   localStorage.setItem("cart",JSON.stringify(elem))
+  //   displaydata(data);
+  //   location.reload();
+  // }
 
   let value=JSON.parse(localStorage.getItem("cart")) || [];
     let totalCost= value.reduce((acc,el)=>{
       return acc+el.price;
-      location.reload();      
+      reset();     
     },0)
     document.querySelector("#cartValue").innerText="₹ "+totalCost;
 </script>
