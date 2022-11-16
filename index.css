@@ -160,7 +160,7 @@ input:hover {
   margin-top: 0px;
   margin-bottom: 25px;
 }
-#midContainer div {
+#midContainer div { 
   border: 1px solid rgb(19, 16, 16);
   width: auto;
 }
